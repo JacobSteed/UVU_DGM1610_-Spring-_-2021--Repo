@@ -9,12 +9,6 @@ public class PlayerControllerX : MonoBehaviour
    
     public float verticalInput;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
