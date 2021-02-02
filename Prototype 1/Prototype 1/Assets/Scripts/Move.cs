@@ -9,7 +9,7 @@ public class Move : MonoBehaviour
     public float turnSpeed = 20.0f;
 
     public float hInput;
-    public float fInput;
+    float fInput;
    
     // Start is called before the first frame update
     void Start()
