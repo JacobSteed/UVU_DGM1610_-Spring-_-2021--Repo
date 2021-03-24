@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
 {
     // Access Modyfier, Data Type, 
     public float speed = 30.0f;
-    public float turnSpeed = 20.0f;
+    public float turnSpeed = 30.0f;
 
     public float hInput;
     float fInput;
