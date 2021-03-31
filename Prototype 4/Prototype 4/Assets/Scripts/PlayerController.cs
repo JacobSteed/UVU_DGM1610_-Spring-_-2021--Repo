@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * Time.deltaTime * forwardInput);
 
-        powerupIndicator.transform.position = transform.position + new Vector3(0, 0.5f, 0);
+        powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
     }
 
     //This block allows player to collect power ups, destroys power up prefab
