@@ -6,18 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     //Left and right movement setup
     public float speed = 20.0f;
+    public float turnSpeed = 30.0f;
     public float hInput;
+    public float fInput;
     
     private Rigidbody playerRb;
-    public float gravityMod;
-    public float jumpForce;
+    public GameObject projectilePrefab;
    
     // Start is called before the first frame update
     void Start()
     {
         //Gravity mod and jump force
         playerRb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityMod;
     }
 
     // Update is called once per frame
@@ -25,12 +25,14 @@ public class PlayerMovement : MonoBehaviour
     {
         //Player movement for left and right
         hInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * hInput * Time.deltaTime * speed);
+        fInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * fInput);
+        transform.Rotate(Vector3.up, turnSpeed * hInput * Time.deltaTime);
 
-        //Jump
+        //Fire Weapon
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
 }
