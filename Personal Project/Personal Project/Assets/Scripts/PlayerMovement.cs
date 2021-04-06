@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public float fInput;
     
     private Rigidbody playerRb;
-    public GameObject projectilePrefab;
    
     // Start is called before the first frame update
     void Start()
@@ -28,12 +27,6 @@ public class PlayerMovement : MonoBehaviour
         fInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * fInput);
         transform.Rotate(Vector3.up, turnSpeed * hInput * Time.deltaTime);
-
-        //Fire Weapon
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        }
     }
 }
 
