@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         enemyCount = FindObjectsOfType<Enemy>().Length;
-
+        //If 0 enemies are in game, then the next wave will spawn more enemies
         if(enemyCount == 0)
         {
             waveNumber ++;
@@ -30,6 +30,7 @@ public class SpawnManager : MonoBehaviour
    
     private Vector3 GenerateSpawnPosition()
     {
+        //Generates the random positions of enemies
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
         Vector3 randomPos = new Vector3(spawnPosX, 1.3f, spawnPosZ);
@@ -39,6 +40,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnEnemyWave(int enemiesToSpawn)
     {
+        //Spawn variables for each enemy waves
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);

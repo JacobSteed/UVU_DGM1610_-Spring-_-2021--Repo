@@ -5,16 +5,11 @@ using UnityEngine;
 public class BulletSpawn : MonoBehaviour
 {
     public GameObject bulletPrefab;
-  
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        // Fires projectile with the spacebar
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPrefab, transform.position, bulletPrefab.transform.rotation);
