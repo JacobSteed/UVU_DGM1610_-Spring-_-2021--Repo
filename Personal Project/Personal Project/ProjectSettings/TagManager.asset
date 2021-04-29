@@ -9,6 +9,7 @@ TagManager:
   - Spawn Manager
   - BulletSpawn
   - bullet
+  - UI
   layers:
   - Default
   - TransparentFX
