@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Player movement for left and right
+        //Player movement for left and right, forward and back
         hInput = Input.GetAxis("Horizontal");
         fInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * fInput);

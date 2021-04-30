@@ -17,13 +17,6 @@ public class GameManager : MonoBehaviour
     public Button resetButton;
     public GameObject titleScreen;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-
-    }
-
     IEnumerator SpawnTarget()
     {
         while (isGameActive)
