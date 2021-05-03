@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  scoreValue: 1
 --- !u!65 &8817420972260873921
 BoxCollider:
   m_ObjectHideFlags: 0

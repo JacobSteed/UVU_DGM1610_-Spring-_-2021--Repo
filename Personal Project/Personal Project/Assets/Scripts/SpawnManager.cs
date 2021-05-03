@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
     private float spawnRange = 20;
 
-    public int enemyCount;
+    public int enemyCount = 3;
     public int waveNumber = 1;
+    public bool isGameActive;
 
     // Start is called before the first frame update
     void Start()

@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTimer: 5
-  speed: 20
+  speed: 30
   bulletSpawn: {fileID: 0}

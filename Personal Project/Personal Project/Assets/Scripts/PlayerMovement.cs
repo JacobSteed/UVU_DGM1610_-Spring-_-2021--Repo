@@ -10,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
     public float hInput;
     public float fInput;
     
+    //Access to Game Manager
+    private GameManager gameManager;
+
+    public bool isGameOver = false;
+    public bool isGameActive = true;
+    
     private Rigidbody playerRb;
    
     // Start is called before the first frame update
@@ -17,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Gravity mod and jump force
         playerRb = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +34,17 @@ public class PlayerMovement : MonoBehaviour
         fInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * fInput);
         transform.Rotate(Vector3.up, turnSpeed * hInput * Time.deltaTime);
+    }
+
+    //Collision to signal to Manager that game is over
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            isGameOver = true;
+            Debug.Log("Game Over");
+            gameManager.GameOver();
+        }
     }
 }
 
