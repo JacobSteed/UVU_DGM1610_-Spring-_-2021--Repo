@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 101163015}
   - component: {fileID: 101163014}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Monolith
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,11 +460,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101163013}
   m_LocalRotation: {x: -0.28300828, y: 0.05040377, z: 0.38647085, w: 0.87635964}
-  m_LocalPosition: {x: -5.74, y: 4.13, z: -0.29}
-  m_LocalScale: {x: 3.1069, y: 3.1069, z: 3.1069}
+  m_LocalPosition: {x: -33.870117, y: -8.401017, z: -2.3344893}
+  m_LocalScale: {x: 3.1069002, y: 3.1069, z: 3.1068997}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1944213730}
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: -32.343002, y: -8.879001, z: 50.174004}
 --- !u!1 &149685955
 GameObject:
@@ -4646,7 +4646,7 @@ GameObject:
   - component: {fileID: 1499791424}
   - component: {fileID: 1499791423}
   m_Layer: 0
-  m_Name: SpawnManager (1)
+  m_Name: SpawnManager 2
   m_TagString: Spawn Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6056,6 +6056,7 @@ Transform:
   - {fileID: 1798993768}
   - {fileID: 464455779}
   - {fileID: 1768932914}
+  - {fileID: 101163017}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
